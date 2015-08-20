@@ -56,6 +56,12 @@
 			FATDevs
     </a>
 				
+
+				
+				
+		
+				
+				
 				
 				<!-- <a class="navbar-brand" href="#page-top">FATDevs</a> -->
             </div>
@@ -75,6 +81,33 @@
                     <li class="page-scroll">
                         <a href="#contact">Contact</a>
                     </li>
+					<li class="">
+							
+				<!-- Play some audio -->
+
+			
+			<audio loop="loop" autoplay ="autoplay" id="myTune">
+<source src="audio/nerdsound.m4a">
+</audio>
+<div class="btn-group btn-group-xs">
+<a href="javascript:void(0)" class="btn-social btn-outline" data-toggle="tooltip" title="Preview" onclick="aud_play_pause()"><i id="stateicon" class="fa fa-pause"></i></a>
+
+<script>
+  function aud_play_pause() {
+    var myAudio = document.getElementById("myTune");
+    if (myAudio.paused) {
+      $('#stateicon').removeClass('fa fa-play');
+      $('#stateicon').addClass('fa fa-pause');
+      myAudio.play();
+    } else {
+      $('#stateicon').removeClass('fa fa-pause');
+      $('#stateicon').addClass('fa fa-play');
+      myAudio.pause();
+   }
+ }
+	</script>		
+			
+					</li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -595,12 +628,7 @@ Additional Projects -->
 	<!-- Additional Scripts -->
 
 			
-			<!-- Play some audio -->
-			<audio loop="loop" autoplay="autoplay">  
-    
-   <source src="audio/nerdsound.m4a" />  
-</audio> 
-			
+
 			
 	<!--  Carousel Controller  -->
 	<script>$('.carousel').carousel({
